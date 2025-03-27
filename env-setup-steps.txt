@@ -1,0 +1,30 @@
+curl -sSL https://install.python-poetry.org | /opt/homebrew/bin/python3 -
+
+poetry --version
+
+poetry init --name mlops-spam-pipeline --description "Spam Classification MLOps Pipeline"
+# or `poetry init -n` to skip interactive steps
+
+# add dependency pkgs into pyproject.toml 
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.0"
+scikit-learn = "^1.2.0"
+PyYAML = "^6.0"
+
+
+poetry env use /opt/homebrew/bin/python3
+poetry shell
+
+# VSCode settings 
+Cmd+Shift+P ->
+Select "Python: Select Interpreter"
+
+# Install dependencies
+poetry install
+
+# Other poetry cmds
+poetry add <package-name>
+poetry remove <package-name>
+poetry update
+poetry run pip list

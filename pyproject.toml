@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mlops-spam-pipeline"
+version = "0.1.0"
+description = "Spam Classification MLOps Pipeline"
+authors = ["Sreejith Madhavan <msreejith@yahoo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.0"
+scikit-learn = "^1.2.0"
+PyYAML = "^6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
